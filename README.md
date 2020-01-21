@@ -1,1 +1,1 @@
-# ulx3s
+# ULX3S FPGA
