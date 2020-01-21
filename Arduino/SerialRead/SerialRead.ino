@@ -1,4 +1,5 @@
 #include <WiFi.h>
+#include <string.h>
 
 const char* ssid     = "yourssid";
 const char* password = "yourpasswd";
@@ -36,6 +37,8 @@ void setup()
 }
 
 int value = 0;
+char output[] = "\0";
+char ch;
 
 void loop(){
  WiFiClient client = server.available();   // listen for incoming clients
@@ -64,8 +67,13 @@ void loop(){
             client.print("Click <a href=\"/L\">here</a> to turn the LED on pin 5 off.<br>");
 
             client.print("<br><h1>");
-            if (Serial.available())
-              client.print((char)Serial.read());
+          
+            if (Serial.available()) {
+              ch = (char)Serial.read();
+              strncat(output, &ch, 1);
+            }
+
+            client.print(output);
             client.print("</h1><br>");
 
             // The HTTP response ends with another blank line:
