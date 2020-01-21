@@ -1,0 +1,1179 @@
+<HTML>
+<HEAD><TITLE>Lattice TRACE Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Par_Twr"></A><B><U><big>Place & Route TRACE Report</big></U></B>
+
+Loading design for application trce from file lab2_impl1.ncd.
+Design name: lab2
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-12F
+Package:     CABGA381
+Performance: 6
+Loading device for application trce from file 'sa5p25.nph' in environment: C:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.33.
+Performance Hardware Data Status:   Final          Version 55.1.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+<A name="Par_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.0.396.4</big></U></B>
+Tue Jan 21 03:58:35 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="ptwr_set_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o lab2_impl1.twr -gui lab2_impl1.ncd lab2_impl1.prf 
+Design file:     lab2_impl1.ncd
+Preference file: lab2_impl1.prf
+Device,speed:    LFE5U-12F,6
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+<A name="ptwr_set_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#par_twr_pref_0_0' Target='right'>FREQUENCY PORT "clk_25mhz" 25.000000 MHz (0 errors)</A></LI>            1968 items scored, 0 timing errors detected.
+Report:  136.314MHz is the maximum frequency for this preference.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="par_twr_pref_0_0"></A>Preference: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;
+            1968 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 32.664ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              I1/R_tx_phase[3]  (from clk_25mhz_c +)
+   Destination:    FF         Data in        I1_R_tx_serio[0]  (to clk_25mhz_c +)
+
+   Delay:               7.461ns  (19.6% logic, 80.4% route), 5 logic levels.
+
+ Constraint Details:
+
+      7.461ns physical path delay I1/SLICE_36 to wifi_rxd_MGIOL meets
+     40.000ns delay constraint less
+     -0.100ns skew and
+     -0.025ns CE_SET requirement (totaling 40.125ns) by 32.664ns
+
+ Physical Path Details:
+
+      Data path I1/SLICE_36 to wifi_rxd_MGIOL:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522     R16C7D.CLK to      R16C7D.Q1 I1/SLICE_36 (from clk_25mhz_c)
+ROUTE         3     0.797      R16C7D.Q1 to      R17C7A.A1 I1/R_tx_phase[3]
+CTOF_DEL    ---     0.236      R17C7A.A1 to      R17C7A.F1 I1/SLICE_41
+ROUTE         1     0.786      R17C7A.F1 to      R16C7C.A1 I1/un1_R_tx_phase_1_0
+CTOF_DEL    ---     0.236      R16C7C.A1 to      R16C7C.F1 I1/SLICE_44
+ROUTE        15     1.092      R16C7C.F1 to      R17C8C.B1 I1/r_tx_tickcnt12
+CTOF_DEL    ---     0.236      R17C8C.B1 to      R17C8C.F1 I1/SLICE_40
+ROUTE         4     1.040      R17C8C.F1 to      R16C9C.A0 I1/R_tx_ser_0_sqmuxa
+CTOF_DEL    ---     0.236      R16C9C.A0 to      R16C9C.F0 I1/SLICE_46
+ROUTE         5     2.280      R16C9C.F0 to    IOL_L29D.CE I1.R_tx_ser_1_sqmuxa_i (to clk_25mhz_c)
+                  --------
+                    7.461   (19.6% logic, 80.4% route), 5 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to I1/SLICE_36:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     2.391       G2.PADDI to     R16C7D.CLK clk_25mhz_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_25mhz to wifi_rxd_MGIOL:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     2.491       G2.PADDI to   IOL_L29D.CLK clk_25mhz_c
+                  --------
+                    2.491   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 32.839ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              I1/R_tx_phase[2]  (from clk_25mhz_c +)
+   Destination:    FF         Data in        I1_R_tx_serio[0]  (to clk_25mhz_c +)
+
+   Delay:               7.286ns  (20.2% logic, 79.8% route), 5 logic levels.
+
+ Constraint Details:
+
+      7.286ns physical path delay I1/SLICE_36 to wifi_rxd_MGIOL meets
+     40.000ns delay constraint less
+     -0.100ns skew and
+     -0.025ns CE_SET requirement (totaling 40.125ns) by 32.839ns
+
+ Physical Path Details:
+
+      Data path I1/SLICE_36 to wifi_rxd_MGIOL:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525     R16C7D.CLK to      R16C7D.Q0 I1/SLICE_36 (from clk_25mhz_c)
+ROUTE         4     0.619      R16C7D.Q0 to      R17C7A.C1 I1/R_tx_phase[2]
+CTOF_DEL    ---     0.236      R17C7A.C1 to      R17C7A.F1 I1/SLICE_41
+ROUTE         1     0.786      R17C7A.F1 to      R16C7C.A1 I1/un1_R_tx_phase_1_0
+CTOF_DEL    ---     0.236      R16C7C.A1 to      R16C7C.F1 I1/SLICE_44
+ROUTE        15     1.092      R16C7C.F1 to      R17C8C.B1 I1/r_tx_tickcnt12
+CTOF_DEL    ---     0.236      R17C8C.B1 to      R17C8C.F1 I1/SLICE_40
+ROUTE         4     1.040      R17C8C.F1 to      R16C9C.A0 I1/R_tx_ser_0_sqmuxa
+CTOF_DEL    ---     0.236      R16C9C.A0 to      R16C9C.F0 I1/SLICE_46
+ROUTE         5     2.280      R16C9C.F0 to    IOL_L29D.CE I1.R_tx_ser_1_sqmuxa_i (to clk_25mhz_c)
+                  --------
+                    7.286   (20.2% logic, 79.8% route), 5 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to I1/SLICE_36:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     2.391       G2.PADDI to     R16C7D.CLK clk_25mhz_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_25mhz to wifi_rxd_MGIOL:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     2.491       G2.PADDI to   IOL_L29D.CLK clk_25mhz_c
+                  --------
+                    2.491   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 33.421ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              I1/R_debounce_cnt[10]  (from clk_25mhz_c +)
+   Destination:    FF         Data in        I1_R_tx_serio[0]  (to clk_25mhz_c +)
+
+   Delay:               6.704ns  (21.9% logic, 78.1% route), 5 logic levels.
+
+ Constraint Details:
+
+      6.704ns physical path delay I1/SLICE_6 to wifi_rxd_MGIOL meets
+     40.000ns delay constraint less
+     -0.100ns skew and
+     -0.025ns CE_SET requirement (totaling 40.125ns) by 33.421ns
+
+ Physical Path Details:
+
+      Data path I1/SLICE_6 to wifi_rxd_MGIOL:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R17C12B.CLK to     R17C12B.Q1 I1/SLICE_6 (from clk_25mhz_c)
+ROUTE         2     0.805     R17C12B.Q1 to     R16C12B.A1 I1/R_debounce_cnt[10]
+CTOF_DEL    ---     0.236     R16C12B.A1 to     R16C12B.F1 I1/SLICE_51
+ROUTE         1     0.558     R16C12B.F1 to     R16C12C.B1 I1/un14_r_debounce_cnt_26_4
+CTOF_DEL    ---     0.236     R16C12C.B1 to     R16C12C.F1 I1/SLICE_48
+ROUTE         3     1.028     R16C12C.F1 to      R16C9B.A1 I1/un14_r_debounce_cnt_26
+CTOF_DEL    ---     0.236      R16C9B.A1 to      R16C9B.F1 I1/SLICE_47
+ROUTE         2     0.567      R16C9B.F1 to      R16C9C.B0 I1/un14_r_debounce_cnt_3
+CTOF_DEL    ---     0.236      R16C9C.B0 to      R16C9C.F0 I1/SLICE_46
+ROUTE         5     2.280      R16C9C.F0 to    IOL_L29D.CE I1.R_tx_ser_1_sqmuxa_i (to clk_25mhz_c)
+                  --------
+                    6.704   (21.9% logic, 78.1% route), 5 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to I1/SLICE_6:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     2.391       G2.PADDI to    R17C12B.CLK clk_25mhz_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_25mhz to wifi_rxd_MGIOL:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     2.491       G2.PADDI to   IOL_L29D.CLK clk_25mhz_c
+                  --------
+                    2.491   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 33.442ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              I1/R_debounce_cnt[8]  (from clk_25mhz_c +)
+   Destination:    FF         Data in        I1_R_tx_serio[0]  (to clk_25mhz_c +)
+
+   Delay:               6.683ns  (21.9% logic, 78.1% route), 5 logic levels.
+
+ Constraint Details:
+
+      6.683ns physical path delay I1/SLICE_5 to wifi_rxd_MGIOL meets
+     40.000ns delay constraint less
+     -0.100ns skew and
+     -0.025ns CE_SET requirement (totaling 40.125ns) by 33.442ns
+
+ Physical Path Details:
+
+      Data path I1/SLICE_5 to wifi_rxd_MGIOL:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R17C12A.CLK to     R17C12A.Q1 I1/SLICE_5 (from clk_25mhz_c)
+ROUTE         2     0.784     R17C12A.Q1 to     R16C12B.B1 I1/R_debounce_cnt[8]
+CTOF_DEL    ---     0.236     R16C12B.B1 to     R16C12B.F1 I1/SLICE_51
+ROUTE         1     0.558     R16C12B.F1 to     R16C12C.B1 I1/un14_r_debounce_cnt_26_4
+CTOF_DEL    ---     0.236     R16C12C.B1 to     R16C12C.F1 I1/SLICE_48
+ROUTE         3     1.028     R16C12C.F1 to      R16C9B.A1 I1/un14_r_debounce_cnt_26
+CTOF_DEL    ---     0.236      R16C9B.A1 to      R16C9B.F1 I1/SLICE_47
+ROUTE         2     0.567      R16C9B.F1 to      R16C9C.B0 I1/un14_r_debounce_cnt_3
+CTOF_DEL    ---     0.236      R16C9C.B0 to      R16C9C.F0 I1/SLICE_46
+ROUTE         5     2.280      R16C9C.F0 to    IOL_L29D.CE I1.R_tx_ser_1_sqmuxa_i (to clk_25mhz_c)
+                  --------
+                    6.683   (21.9% logic, 78.1% route), 5 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to I1/SLICE_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     2.391       G2.PADDI to    R17C12A.CLK clk_25mhz_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_25mhz to wifi_rxd_MGIOL:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     2.491       G2.PADDI to   IOL_L29D.CLK clk_25mhz_c
+                  --------
+                    2.491   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 33.522ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              I1/R_baudgen[16]  (from clk_25mhz_c +)
+   Destination:    FF         Data in        I1_R_tx_serio[0]  (to clk_25mhz_c +)
+
+   Delay:               6.603ns  (18.6% logic, 81.4% route), 4 logic levels.
+
+ Constraint Details:
+
+      6.603ns physical path delay I1/SLICE_26 to wifi_rxd_MGIOL meets
+     40.000ns delay constraint less
+     -0.100ns skew and
+     -0.025ns CE_SET requirement (totaling 40.125ns) by 33.522ns
+
+ Physical Path Details:
+
+      Data path I1/SLICE_26 to wifi_rxd_MGIOL:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522     R15C7A.CLK to      R15C7A.Q1 I1/SLICE_26 (from clk_25mhz_c)
+ROUTE         1     0.961      R15C7A.Q1 to      R16C7C.B1 I1/R_baudgen[16]
+CTOF_DEL    ---     0.236      R16C7C.B1 to      R16C7C.F1 I1/SLICE_44
+ROUTE        15     1.092      R16C7C.F1 to      R17C8C.B1 I1/r_tx_tickcnt12
+CTOF_DEL    ---     0.236      R17C8C.B1 to      R17C8C.F1 I1/SLICE_40
+ROUTE         4     1.040      R17C8C.F1 to      R16C9C.A0 I1/R_tx_ser_0_sqmuxa
+CTOF_DEL    ---     0.236      R16C9C.A0 to      R16C9C.F0 I1/SLICE_46
+ROUTE         5     2.280      R16C9C.F0 to    IOL_L29D.CE I1.R_tx_ser_1_sqmuxa_i (to clk_25mhz_c)
+                  --------
+                    6.603   (18.6% logic, 81.4% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to I1/SLICE_26:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     2.391       G2.PADDI to     R15C7A.CLK clk_25mhz_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_25mhz to wifi_rxd_MGIOL:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     2.491       G2.PADDI to   IOL_L29D.CLK clk_25mhz_c
+                  --------
+                    2.491   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 33.612ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              I1/R_debounce_cnt[11]  (from clk_25mhz_c +)
+   Destination:    FF         Data in        I1_R_tx_serio[0]  (to clk_25mhz_c +)
+
+   Delay:               6.513ns  (22.6% logic, 77.4% route), 5 logic levels.
+
+ Constraint Details:
+
+      6.513ns physical path delay I1/SLICE_7 to wifi_rxd_MGIOL meets
+     40.000ns delay constraint less
+     -0.100ns skew and
+     -0.025ns CE_SET requirement (totaling 40.125ns) by 33.612ns
+
+ Physical Path Details:
+
+      Data path I1/SLICE_7 to wifi_rxd_MGIOL:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R17C12C.CLK to     R17C12C.Q0 I1/SLICE_7 (from clk_25mhz_c)
+ROUTE         2     0.611     R17C12C.Q0 to     R16C12B.C1 I1/R_debounce_cnt[11]
+CTOF_DEL    ---     0.236     R16C12B.C1 to     R16C12B.F1 I1/SLICE_51
+ROUTE         1     0.558     R16C12B.F1 to     R16C12C.B1 I1/un14_r_debounce_cnt_26_4
+CTOF_DEL    ---     0.236     R16C12C.B1 to     R16C12C.F1 I1/SLICE_48
+ROUTE         3     1.028     R16C12C.F1 to      R16C9B.A1 I1/un14_r_debounce_cnt_26
+CTOF_DEL    ---     0.236      R16C9B.A1 to      R16C9B.F1 I1/SLICE_47
+ROUTE         2     0.567      R16C9B.F1 to      R16C9C.B0 I1/un14_r_debounce_cnt_3
+CTOF_DEL    ---     0.236      R16C9C.B0 to      R16C9C.F0 I1/SLICE_46
+ROUTE         5     2.280      R16C9C.F0 to    IOL_L29D.CE I1.R_tx_ser_1_sqmuxa_i (to clk_25mhz_c)
+                  --------
+                    6.513   (22.6% logic, 77.4% route), 5 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to I1/SLICE_7:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     2.391       G2.PADDI to    R17C12C.CLK clk_25mhz_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_25mhz to wifi_rxd_MGIOL:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     2.491       G2.PADDI to   IOL_L29D.CLK clk_25mhz_c
+                  --------
+                    2.491   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 33.655ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              I1/R_tx_phase[1]  (from clk_25mhz_c +)
+   Destination:    FF         Data in        I1_R_tx_serio[0]  (to clk_25mhz_c +)
+
+   Delay:               6.470ns  (19.0% logic, 81.0% route), 4 logic levels.
+
+ Constraint Details:
+
+      6.470ns physical path delay I1/SLICE_35 to wifi_rxd_MGIOL meets
+     40.000ns delay constraint less
+     -0.100ns skew and
+     -0.025ns CE_SET requirement (totaling 40.125ns) by 33.655ns
+
+ Physical Path Details:
+
+      Data path I1/SLICE_35 to wifi_rxd_MGIOL:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522     R16C8A.CLK to      R16C8A.Q1 I1/SLICE_35 (from clk_25mhz_c)
+ROUTE         5     0.828      R16C8A.Q1 to      R16C7C.C1 I1/R_tx_phase[1]
+CTOF_DEL    ---     0.236      R16C7C.C1 to      R16C7C.F1 I1/SLICE_44
+ROUTE        15     1.092      R16C7C.F1 to      R17C8C.B1 I1/r_tx_tickcnt12
+CTOF_DEL    ---     0.236      R17C8C.B1 to      R17C8C.F1 I1/SLICE_40
+ROUTE         4     1.040      R17C8C.F1 to      R16C9C.A0 I1/R_tx_ser_0_sqmuxa
+CTOF_DEL    ---     0.236      R16C9C.A0 to      R16C9C.F0 I1/SLICE_46
+ROUTE         5     2.280      R16C9C.F0 to    IOL_L29D.CE I1.R_tx_ser_1_sqmuxa_i (to clk_25mhz_c)
+                  --------
+                    6.470   (19.0% logic, 81.0% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to I1/SLICE_35:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     2.391       G2.PADDI to     R16C8A.CLK clk_25mhz_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_25mhz to wifi_rxd_MGIOL:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     2.491       G2.PADDI to   IOL_L29D.CLK clk_25mhz_c
+                  --------
+                    2.491   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 33.799ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              I1/R_debounce_cnt[12]  (from clk_25mhz_c +)
+   Destination:    FF         Data in        I1_R_tx_serio[0]  (to clk_25mhz_c +)
+
+   Delay:               6.326ns  (23.2% logic, 76.8% route), 5 logic levels.
+
+ Constraint Details:
+
+      6.326ns physical path delay I1/SLICE_7 to wifi_rxd_MGIOL meets
+     40.000ns delay constraint less
+     -0.100ns skew and
+     -0.025ns CE_SET requirement (totaling 40.125ns) by 33.799ns
+
+ Physical Path Details:
+
+      Data path I1/SLICE_7 to wifi_rxd_MGIOL:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R17C12C.CLK to     R17C12C.Q1 I1/SLICE_7 (from clk_25mhz_c)
+ROUTE         2     0.792     R17C12C.Q1 to     R16C12B.A0 I1/R_debounce_cnt[12]
+CTOF_DEL    ---     0.236     R16C12B.A0 to     R16C12B.F0 I1/SLICE_51
+ROUTE         1     0.193     R16C12B.F0 to     R16C12C.D1 I1/un14_r_debounce_cnt_26_3
+CTOF_DEL    ---     0.236     R16C12C.D1 to     R16C12C.F1 I1/SLICE_48
+ROUTE         3     1.028     R16C12C.F1 to      R16C9B.A1 I1/un14_r_debounce_cnt_26
+CTOF_DEL    ---     0.236      R16C9B.A1 to      R16C9B.F1 I1/SLICE_47
+ROUTE         2     0.567      R16C9B.F1 to      R16C9C.B0 I1/un14_r_debounce_cnt_3
+CTOF_DEL    ---     0.236      R16C9C.B0 to      R16C9C.F0 I1/SLICE_46
+ROUTE         5     2.280      R16C9C.F0 to    IOL_L29D.CE I1.R_tx_ser_1_sqmuxa_i (to clk_25mhz_c)
+                  --------
+                    6.326   (23.2% logic, 76.8% route), 5 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to I1/SLICE_7:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     2.391       G2.PADDI to    R17C12C.CLK clk_25mhz_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_25mhz to wifi_rxd_MGIOL:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     2.491       G2.PADDI to   IOL_L29D.CLK clk_25mhz_c
+                  --------
+                    2.491   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 33.801ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              I1/R_debounce_cnt[9]  (from clk_25mhz_c +)
+   Destination:    FF         Data in        I1_R_tx_serio[0]  (to clk_25mhz_c +)
+
+   Delay:               6.324ns  (23.2% logic, 76.8% route), 5 logic levels.
+
+ Constraint Details:
+
+      6.324ns physical path delay I1/SLICE_6 to wifi_rxd_MGIOL meets
+     40.000ns delay constraint less
+     -0.100ns skew and
+     -0.025ns CE_SET requirement (totaling 40.125ns) by 33.801ns
+
+ Physical Path Details:
+
+      Data path I1/SLICE_6 to wifi_rxd_MGIOL:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525    R17C12B.CLK to     R17C12B.Q0 I1/SLICE_6 (from clk_25mhz_c)
+ROUTE         2     0.422     R17C12B.Q0 to     R16C12B.D1 I1/R_debounce_cnt[9]
+CTOF_DEL    ---     0.236     R16C12B.D1 to     R16C12B.F1 I1/SLICE_51
+ROUTE         1     0.558     R16C12B.F1 to     R16C12C.B1 I1/un14_r_debounce_cnt_26_4
+CTOF_DEL    ---     0.236     R16C12C.B1 to     R16C12C.F1 I1/SLICE_48
+ROUTE         3     1.028     R16C12C.F1 to      R16C9B.A1 I1/un14_r_debounce_cnt_26
+CTOF_DEL    ---     0.236      R16C9B.A1 to      R16C9B.F1 I1/SLICE_47
+ROUTE         2     0.567      R16C9B.F1 to      R16C9C.B0 I1/un14_r_debounce_cnt_3
+CTOF_DEL    ---     0.236      R16C9C.B0 to      R16C9C.F0 I1/SLICE_46
+ROUTE         5     2.280      R16C9C.F0 to    IOL_L29D.CE I1.R_tx_ser_1_sqmuxa_i (to clk_25mhz_c)
+                  --------
+                    6.324   (23.2% logic, 76.8% route), 5 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to I1/SLICE_6:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     2.391       G2.PADDI to    R17C12B.CLK clk_25mhz_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_25mhz to wifi_rxd_MGIOL:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     2.491       G2.PADDI to   IOL_L29D.CLK clk_25mhz_c
+                  --------
+                    2.491   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 33.873ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              I1/R_tx_tickcnt[1]  (from clk_25mhz_c +)
+   Destination:    FF         Data in        I1_R_tx_serio[0]  (to clk_25mhz_c +)
+
+   Delay:               6.252ns  (19.7% logic, 80.3% route), 4 logic levels.
+
+ Constraint Details:
+
+      6.252ns physical path delay I1/SLICE_42 to wifi_rxd_MGIOL meets
+     40.000ns delay constraint less
+     -0.100ns skew and
+     -0.025ns CE_SET requirement (totaling 40.125ns) by 33.873ns
+
+ Physical Path Details:
+
+      Data path I1/SLICE_42 to wifi_rxd_MGIOL:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.525     R18C7B.CLK to      R18C7B.Q0 I1/SLICE_42 (from clk_25mhz_c)
+ROUTE         4     0.783      R18C7B.Q0 to      R18C7D.A1 I1/R_tx_tickcnt[1]
+CTOF_DEL    ---     0.236      R18C7D.A1 to      R18C7D.F1 I1/SLICE_45
+ROUTE        12     0.916      R18C7D.F1 to      R17C8C.D1 I1/un6_r_tx_tickcnt
+CTOF_DEL    ---     0.236      R17C8C.D1 to      R17C8C.F1 I1/SLICE_40
+ROUTE         4     1.040      R17C8C.F1 to      R16C9C.A0 I1/R_tx_ser_0_sqmuxa
+CTOF_DEL    ---     0.236      R16C9C.A0 to      R16C9C.F0 I1/SLICE_46
+ROUTE         5     2.280      R16C9C.F0 to    IOL_L29D.CE I1.R_tx_ser_1_sqmuxa_i (to clk_25mhz_c)
+                  --------
+                    6.252   (19.7% logic, 80.3% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to I1/SLICE_42:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     2.391       G2.PADDI to     R18C7B.CLK clk_25mhz_c
+                  --------
+                    2.391   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_25mhz to wifi_rxd_MGIOL:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     2.491       G2.PADDI to   IOL_L29D.CLK clk_25mhz_c
+                  --------
+                    2.491   (0.0% logic, 100.0% route), 0 logic levels.
+
+Report:  136.314MHz is the maximum frequency for this preference.
+
+<A name="ptwr_set_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY PORT "clk_25mhz" 25.000000    |             |             |
+MHz ;                                   |   25.000 MHz|  136.314 MHz|   5  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="ptwr_set_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: clk_25mhz_c   Source: clk_25mhz.PAD   Loads: 40
+   Covered under: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;
+
+
+<A name="ptwr_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1968 paths, 1 nets, and 381 connections (87.39% coverage)
+
+--------------------------------------------------------------------------------
+<A name="Par_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.0.396.4</big></U></B>
+Tue Jan 21 03:58:35 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="ptwr_hold_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o lab2_impl1.twr -gui lab2_impl1.ncd lab2_impl1.prf 
+Design file:     lab2_impl1.ncd
+Preference file: lab2_impl1.prf
+Device,speed:    LFE5U-12F,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+<A name="ptwr_hold_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#par_twr_pref_1_0' Target='right'>FREQUENCY PORT "clk_25mhz" 25.000000 MHz (0 errors)</A></LI>            1968 items scored, 0 timing errors detected.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="par_twr_pref_1_0"></A>Preference: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;
+            1968 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.178ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              I1/R_tx_tickcnt[1]  (from clk_25mhz_c +)
+   Destination:    FF         Data in        I1/R_tx_tickcnt[1]  (to clk_25mhz_c +)
+
+   Delay:               0.297ns  (80.8% logic, 19.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.297ns physical path delay I1/SLICE_42 to I1/SLICE_42 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.178ns
+
+ Physical Path Details:
+
+      Data path I1/SLICE_42 to I1/SLICE_42:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164     R18C7B.CLK to      R18C7B.Q0 I1/SLICE_42 (from clk_25mhz_c)
+ROUTE         4     0.057      R18C7B.Q0 to      R18C7B.D0 I1/R_tx_tickcnt[1]
+CTOF_DEL    ---     0.076      R18C7B.D0 to      R18C7B.F0 I1/SLICE_42
+ROUTE         1     0.000      R18C7B.F0 to     R18C7B.DI0 I1/R_tx_tickcnt_n1 (to clk_25mhz_c)
+                  --------
+                    0.297   (80.8% logic, 19.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to I1/SLICE_42:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     0.736       G2.PADDI to     R18C7B.CLK clk_25mhz_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_25mhz to I1/SLICE_42:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     0.736       G2.PADDI to     R18C7B.CLK clk_25mhz_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.178ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              I1/R_tx_tickcnt[3]  (from clk_25mhz_c +)
+   Destination:    FF         Data in        I1/R_tx_tickcnt[3]  (to clk_25mhz_c +)
+
+   Delay:               0.297ns  (80.8% logic, 19.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.297ns physical path delay I1/SLICE_43 to I1/SLICE_43 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.178ns
+
+ Physical Path Details:
+
+      Data path I1/SLICE_43 to I1/SLICE_43:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164     R18C7A.CLK to      R18C7A.Q0 I1/SLICE_43 (from clk_25mhz_c)
+ROUTE         2     0.057      R18C7A.Q0 to      R18C7A.D0 I1/R_tx_tickcnt[3]
+CTOF_DEL    ---     0.076      R18C7A.D0 to      R18C7A.F0 I1/SLICE_43
+ROUTE         1     0.000      R18C7A.F0 to     R18C7A.DI0 I1/R_tx_tickcnt_n3 (to clk_25mhz_c)
+                  --------
+                    0.297   (80.8% logic, 19.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to I1/SLICE_43:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     0.736       G2.PADDI to     R18C7A.CLK clk_25mhz_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_25mhz to I1/SLICE_43:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     0.736       G2.PADDI to     R18C7A.CLK clk_25mhz_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.178ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              I1/R_tx_tickcnt[0]  (from clk_25mhz_c +)
+   Destination:    FF         Data in        I1/R_tx_tickcnt[0]  (to clk_25mhz_c +)
+
+   Delay:               0.297ns  (80.8% logic, 19.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.297ns physical path delay I1/SLICE_41 to I1/SLICE_41 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.178ns
+
+ Physical Path Details:
+
+      Data path I1/SLICE_41 to I1/SLICE_41:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164     R17C7A.CLK to      R17C7A.Q0 I1/SLICE_41 (from clk_25mhz_c)
+ROUTE         5     0.057      R17C7A.Q0 to      R17C7A.D0 I1/R_tx_tickcnt[0]
+CTOF_DEL    ---     0.076      R17C7A.D0 to      R17C7A.F0 I1/SLICE_41
+ROUTE         1     0.000      R17C7A.F0 to     R17C7A.DI0 I1/R_tx_tickcnt_e0 (to clk_25mhz_c)
+                  --------
+                    0.297   (80.8% logic, 19.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to I1/SLICE_41:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     0.736       G2.PADDI to     R17C7A.CLK clk_25mhz_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_25mhz to I1/SLICE_41:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     0.736       G2.PADDI to     R17C7A.CLK clk_25mhz_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.179ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              I1/R_debounce_cnt[0]  (from clk_25mhz_c +)
+   Destination:    FF         Data in        I1/R_debounce_cnt[0]  (to clk_25mhz_c +)
+
+   Delay:               0.298ns  (80.5% logic, 19.5% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.298ns physical path delay I1/SLICE_34 to I1/SLICE_34 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.179ns
+
+ Physical Path Details:
+
+      Data path I1/SLICE_34 to I1/SLICE_34:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164    R16C11B.CLK to     R16C11B.Q0 I1/SLICE_34 (from clk_25mhz_c)
+ROUTE         4     0.058     R16C11B.Q0 to     R16C11B.D0 I1/R_debounce_cnt[0]
+CTOF_DEL    ---     0.076     R16C11B.D0 to     R16C11B.F0 I1/SLICE_34
+ROUTE         1     0.000     R16C11B.F0 to    R16C11B.DI0 I1/un1_R_debounce_cnt_3[31] (to clk_25mhz_c)
+                  --------
+                    0.298   (80.5% logic, 19.5% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to I1/SLICE_34:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     0.736       G2.PADDI to    R16C11B.CLK clk_25mhz_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_25mhz to I1/SLICE_34:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     0.736       G2.PADDI to    R16C11B.CLK clk_25mhz_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.192ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              I1/R_baudgen[0]  (from clk_25mhz_c +)
+   Destination:    FF         Data in        I1/R_baudgen[0]  (to clk_25mhz_c +)
+
+   Delay:               0.311ns  (77.2% logic, 22.8% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.311ns physical path delay I1/SLICE_29 to I1/SLICE_29 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.192ns
+
+ Physical Path Details:
+
+      Data path I1/SLICE_29 to I1/SLICE_29:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164     R16C5C.CLK to      R16C5C.Q0 I1/SLICE_29 (from clk_25mhz_c)
+ROUTE         2     0.071      R16C5C.Q0 to      R16C5C.C0 I1/R_baudgen[0]
+CTOF_DEL    ---     0.076      R16C5C.C0 to      R16C5C.F0 I1/SLICE_29
+ROUTE         1     0.000      R16C5C.F0 to     R16C5C.DI0 I1/R_baudgen_i[0] (to clk_25mhz_c)
+                  --------
+                    0.311   (77.2% logic, 22.8% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to I1/SLICE_29:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     0.736       G2.PADDI to     R16C5C.CLK clk_25mhz_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_25mhz to I1/SLICE_29:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     0.736       G2.PADDI to     R16C5C.CLK clk_25mhz_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.193ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              I1/R_tx_phase[2]  (from clk_25mhz_c +)
+   Destination:    FF         Data in        I1/R_tx_phase[2]  (to clk_25mhz_c +)
+
+   Delay:               0.312ns  (76.9% logic, 23.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.312ns physical path delay I1/SLICE_36 to I1/SLICE_36 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.193ns
+
+ Physical Path Details:
+
+      Data path I1/SLICE_36 to I1/SLICE_36:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.164     R16C7D.CLK to      R16C7D.Q0 I1/SLICE_36 (from clk_25mhz_c)
+ROUTE         4     0.072      R16C7D.Q0 to      R16C7D.C0 I1/R_tx_phase[2]
+CTOF_DEL    ---     0.076      R16C7D.C0 to      R16C7D.F0 I1/SLICE_36
+ROUTE         1     0.000      R16C7D.F0 to     R16C7D.DI0 I1/R_tx_phase_7[2] (to clk_25mhz_c)
+                  --------
+                    0.312   (76.9% logic, 23.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to I1/SLICE_36:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     0.736       G2.PADDI to     R16C7D.CLK clk_25mhz_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_25mhz to I1/SLICE_36:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     0.736       G2.PADDI to     R16C7D.CLK clk_25mhz_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.241ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              I1/R_tx_ser[2]  (from clk_25mhz_c +)
+   Destination:    FF         Data in        I1/R_tx_ser[1]  (to clk_25mhz_c +)
+
+   Delay:               0.360ns  (66.4% logic, 33.6% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.360ns physical path delay I1/SLICE_37 to I1/SLICE_37 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.241ns
+
+ Physical Path Details:
+
+      Data path I1/SLICE_37 to I1/SLICE_37:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163     R17C7D.CLK to      R17C7D.Q1 I1/SLICE_37 (from clk_25mhz_c)
+ROUTE         1     0.121      R17C7D.Q1 to      R17C7D.D0 I1/R_tx_ser[2]
+CTOF_DEL    ---     0.076      R17C7D.D0 to      R17C7D.F0 I1/SLICE_37
+ROUTE         1     0.000      R17C7D.F0 to     R17C7D.DI0 I1/R_tx_ser_5[1] (to clk_25mhz_c)
+                  --------
+                    0.360   (66.4% logic, 33.6% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to I1/SLICE_37:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     0.736       G2.PADDI to     R17C7D.CLK clk_25mhz_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_25mhz to I1/SLICE_37:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     0.736       G2.PADDI to     R17C7D.CLK clk_25mhz_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.253ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              I1/R_tx_ser[6]  (from clk_25mhz_c +)
+   Destination:    FF         Data in        I1/R_tx_ser[5]  (to clk_25mhz_c +)
+
+   Delay:               0.372ns  (64.2% logic, 35.8% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.372ns physical path delay I1/SLICE_39 to I1/SLICE_39 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.253ns
+
+ Physical Path Details:
+
+      Data path I1/SLICE_39 to I1/SLICE_39:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163     R18C8D.CLK to      R18C8D.Q1 I1/SLICE_39 (from clk_25mhz_c)
+ROUTE         1     0.133      R18C8D.Q1 to      R18C8D.D0 I1/R_tx_ser[6]
+CTOF_DEL    ---     0.076      R18C8D.D0 to      R18C8D.F0 I1/SLICE_39
+ROUTE         1     0.000      R18C8D.F0 to     R18C8D.DI0 I1/R_tx_ser_5[5] (to clk_25mhz_c)
+                  --------
+                    0.372   (64.2% logic, 35.8% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to I1/SLICE_39:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     0.736       G2.PADDI to     R18C8D.CLK clk_25mhz_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_25mhz to I1/SLICE_39:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     0.736       G2.PADDI to     R18C8D.CLK clk_25mhz_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.254ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              I1/R_tx_ser[4]  (from clk_25mhz_c +)
+   Destination:    FF         Data in        I1/R_tx_ser[3]  (to clk_25mhz_c +)
+
+   Delay:               0.373ns  (64.1% logic, 35.9% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.373ns physical path delay I1/SLICE_38 to I1/SLICE_38 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.254ns
+
+ Physical Path Details:
+
+      Data path I1/SLICE_38 to I1/SLICE_38:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163     R18C8C.CLK to      R18C8C.Q1 I1/SLICE_38 (from clk_25mhz_c)
+ROUTE         1     0.134      R18C8C.Q1 to      R18C8C.C0 I1/R_tx_ser[4]
+CTOF_DEL    ---     0.076      R18C8C.C0 to      R18C8C.F0 I1/SLICE_38
+ROUTE         1     0.000      R18C8C.F0 to     R18C8C.DI0 I1/R_tx_ser_5[3] (to clk_25mhz_c)
+                  --------
+                    0.373   (64.1% logic, 35.9% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to I1/SLICE_38:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     0.736       G2.PADDI to     R18C8C.CLK clk_25mhz_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_25mhz to I1/SLICE_38:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     0.736       G2.PADDI to     R18C8C.CLK clk_25mhz_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.255ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              I1/R_tx_phase[1]  (from clk_25mhz_c +)
+   Destination:    FF         Data in        I1/R_tx_phase[1]  (to clk_25mhz_c +)
+
+   Delay:               0.374ns  (63.9% logic, 36.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.374ns physical path delay I1/SLICE_35 to I1/SLICE_35 meets
+      0.119ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.119ns) by 0.255ns
+
+ Physical Path Details:
+
+      Data path I1/SLICE_35 to I1/SLICE_35:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.163     R16C8A.CLK to      R16C8A.Q1 I1/SLICE_35 (from clk_25mhz_c)
+ROUTE         5     0.135      R16C8A.Q1 to      R16C8A.D1 I1/R_tx_phase[1]
+CTOF_DEL    ---     0.076      R16C8A.D1 to      R16C8A.F1 I1/SLICE_35
+ROUTE         1     0.000      R16C8A.F1 to     R16C8A.DI1 I1/R_tx_phase_7[1] (to clk_25mhz_c)
+                  --------
+                    0.374   (63.9% logic, 36.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_25mhz to I1/SLICE_35:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     0.736       G2.PADDI to     R16C8A.CLK clk_25mhz_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_25mhz to I1/SLICE_35:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        40     0.736       G2.PADDI to     R16C8A.CLK clk_25mhz_c
+                  --------
+                    0.736   (0.0% logic, 100.0% route), 0 logic levels.
+
+<A name="ptwr_hold_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY PORT "clk_25mhz" 25.000000    |             |             |
+MHz ;                                   |            -|            -|   2  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="ptwr_hold_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: clk_25mhz_c   Source: clk_25mhz.PAD   Loads: 40
+   Covered under: FREQUENCY PORT "clk_25mhz" 25.000000 MHz ;
+
+
+<A name="ptwr_hold_ts"></A><B><U><big>Timing summary (Hold):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1968 paths, 1 nets, and 381 connections (87.39% coverage)
+
+
+
+<A name="ptwr_ts"></A><B><U><big>Timing summary (Setup and Hold):</big></U></B>
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>
