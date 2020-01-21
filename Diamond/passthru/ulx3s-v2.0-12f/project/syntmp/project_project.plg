@@ -1,0 +1,13 @@
+@P:  Worst Slack : 1.462
+@P:  ulx3s_passthru_wifi|clk_25mhz - Estimated Frequency : 282.6 MHz
+@P:  ulx3s_passthru_wifi|clk_25mhz - Requested Frequency : 200.0 MHz
+@P:  ulx3s_passthru_wifi|clk_25mhz - Estimated Period : 3.538
+@P:  ulx3s_passthru_wifi|clk_25mhz - Requested Period : 5.000
+@P:  ulx3s_passthru_wifi|clk_25mhz - Slack : 1.462
+@P:  ulx3s_passthru_wifi|sd_clk - Estimated Frequency : 619.2 MHz
+@P:  ulx3s_passthru_wifi|sd_clk - Requested Frequency : 200.0 MHz
+@P:  ulx3s_passthru_wifi|sd_clk - Estimated Period : 1.615
+@P:  ulx3s_passthru_wifi|sd_clk - Requested Period : 5.000
+@P:  ulx3s_passthru_wifi|sd_clk - Slack : 3.385
+@P:  Total Area : 55.0
+@P:  CPU Time : 0h:00m:00s

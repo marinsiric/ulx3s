@@ -1,0 +1,1 @@
+project -fileorder "C:/lscc/diamond/3.11_x64/cae_library/synthesis/vhdl/ecp5u.vhd" "C:/lscc/ulx3s-passthru/rtl/ulx3s_v20_passthru_wifi.vhd" 

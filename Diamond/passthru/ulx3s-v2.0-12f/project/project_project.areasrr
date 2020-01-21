@@ -1,0 +1,25 @@
+----------------------------------------------------------------------
+Report for cell ulx3s_passthru_wifi.behavioral
+
+Register bits: 43 of 12096 (0%)
+PIC Latch:       0
+I/O cells:       43
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C       15       100.0
+                            FD1S3AY       18       100.0
+                            FD1S3BX        7       100.0
+                            FD1S3DX        8       100.0
+                            FD1S3IX        8       100.0
+                                GSR        1       100.0
+                                 IB       18       100.0
+                           IFS1P3DX        2       100.0
+                                INV        3       100.0
+                                 OB       16       100.0
+                                OBZ        9       100.0
+                           ORCALUT4       52       100.0
+                                PUR        1       100.0
+                                VHI        1       100.0
+                                VLO        1       100.0
+                            
+                         TOTAL           160           

@@ -1,0 +1,9 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N:"C:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":15:7:15:25|Top entity is set to ulx3s_passthru_wifi.
+@N: CD630 :"C:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":15:7:15:25|Synthesizing work.ulx3s_passthru_wifi.behavioral.
+@N: CL159 :"C:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":42:2:42:3|Input sw is unused.
+@N: CL159 :"C:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":69:2:69:7|Input sd_cdn is unused.
+@N: CL159 :"C:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":69:10:69:14|Input sd_wp is unused.
+@N|Running in 64-bit mode
+

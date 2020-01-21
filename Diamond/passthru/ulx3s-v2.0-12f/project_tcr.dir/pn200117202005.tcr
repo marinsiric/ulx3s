@@ -1,0 +1,9 @@
+#Start recording tcl command: 1/17/2020 20:19:39
+#Project Location: C:/lscc/ulx3s-passthru/proj/ulx3s-v2.0-12f; Project name: project
+C:/lscc/passthru-test
+project
+#Start recording tcl command: 1/17/2020 20:20:05
+#Project Location: C:/lscc/passthru-test; Project name: project
+prj_project open "C:/lscc/ulx3s-passthru/proj/ulx3s-v2.0-12f/project.ldf"
+prj_project saveas -name "project" -dir "C:/lscc/passthru-test"
+#Stop recording: 1/17/2020 20:20:05

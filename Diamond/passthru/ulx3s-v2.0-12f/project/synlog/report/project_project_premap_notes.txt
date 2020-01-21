@@ -1,0 +1,13 @@
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MH105 |UMR3 is only supported for HAPS-80.
+@N: MH105 |UMR3 is only supported for HAPS-80.
+@N: MO111 :"c:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":40:2:40:4|Tristate driver led_1 (in view: work.ulx3s_passthru_wifi(behavioral)) on net led[4] (in view: work.ulx3s_passthru_wifi(behavioral)) has its enable tied to GND.
+@N: MO111 :"c:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":40:2:40:4|Tristate driver led_2 (in view: work.ulx3s_passthru_wifi(behavioral)) on net led[3] (in view: work.ulx3s_passthru_wifi(behavioral)) has its enable tied to GND.
+@N: MO111 :"c:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":40:2:40:4|Tristate driver led_3 (in view: work.ulx3s_passthru_wifi(behavioral)) on net led[2] (in view: work.ulx3s_passthru_wifi(behavioral)) has its enable tied to GND.
+@N: MO111 :"c:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":40:2:40:4|Tristate driver led_4 (in view: work.ulx3s_passthru_wifi(behavioral)) on net led[1] (in view: work.ulx3s_passthru_wifi(behavioral)) has its enable tied to GND.
+@N: MO111 :"c:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":40:2:40:4|Tristate driver led_5 (in view: work.ulx3s_passthru_wifi(behavioral)) on net led[0] (in view: work.ulx3s_passthru_wifi(behavioral)) has its enable tied to GND.
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.

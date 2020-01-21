@@ -1,0 +1,5 @@
+#Start recording tcl command: 11/12/2019 00:07:21
+#Project Location: C:/lscc/ulx3s-passthru/proj/ulx3s-v2.0-12f; Project name: project
+prj_project open "C:/lscc/ulx3s-passthru/proj/ulx3s-v2.0-12f/project.ldf"
+prj_run Export -impl project
+#Stop recording: 11/12/2019 00:42:32

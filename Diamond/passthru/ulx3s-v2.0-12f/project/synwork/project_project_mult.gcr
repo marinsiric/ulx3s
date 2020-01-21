@@ -1,0 +1,13 @@
+i clk_25mhz
+m 0 0
+u 20 28
+p {p:clk_25mhz}{t:R_prog_release[17].C}
+e ckid0_0 {t:R_prog_release[17].C} dffs
+c ckid0_0 {p:clk_25mhz} Unconstrained_port Inferred clock from port
+i sd_clk
+m 0 0
+u 8 8
+p {p:sd_clk}{t:R_spi_miso[7].C}
+e ckid0_1 {t:R_spi_miso[7].C} dffr
+c ckid0_1 {p:sd_clk} Unconstrained_port Inferred clock from port
+l 0 0 0 0 0

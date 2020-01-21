@@ -1,0 +1,9 @@
+@W: BN137 :|Found combinational loop during mapping at net R_spi_miso_0_.ctrl
+@W: BN137 :|Found combinational loop during mapping at net R_spi_miso_1_.ctrl
+@W: BN137 :|Found combinational loop during mapping at net R_spi_miso_2_.ctrl
+@W: BN137 :|Found combinational loop during mapping at net R_spi_miso_3_.ctrl
+@W: BN137 :|Found combinational loop during mapping at net R_spi_miso_4_.ctrl
+@W: BN137 :|Found combinational loop during mapping at net R_spi_miso_5_.ctrl
+@W: BN137 :|Found combinational loop during mapping at net R_spi_miso_6_.ctrl
+@W: MT420 |Found inferred clock ulx3s_passthru_wifi|clk_25mhz with period 5.00ns. Please declare a user-defined clock on port clk_25mhz.
+@W: MT420 |Found inferred clock ulx3s_passthru_wifi|sd_clk with period 5.00ns. Please declare a user-defined clock on port sd_clk.

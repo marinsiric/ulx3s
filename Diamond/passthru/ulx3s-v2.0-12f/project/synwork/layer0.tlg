@@ -1,0 +1,21 @@
+@N: CD630 :"C:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":15:7:15:25|Synthesizing work.ulx3s_passthru_wifi.behavioral.
+@W: CG296 :"C:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":149:2:149:8|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
+@W: CG290 :"C:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":152:26:152:28|Referenced variable btn is not in sensitivity list.
+Post processing for work.ulx3s_passthru_wifi.behavioral
+Running optimization stage 1 on ulx3s_passthru_wifi .......
+Running optimization stage 2 on ulx3s_passthru_wifi .......
+@W: CL158 :"C:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":29:2:29:10|Inout ftdi_ndsr is unused
+@W: CL158 :"C:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":31:2:31:11|Inout ftdi_txden is unused
+@W: CL158 :"C:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":37:23:37:32|Inout wifi_gpio2 is unused
+@N: CL159 :"C:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":42:2:42:3|Input sw is unused.
+@W: CL158 :"C:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":46:6:46:7|Inout gn is unused
+@W: CL158 :"C:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":52:2:52:8|Inout audio_l is unused
+@W: CL158 :"C:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":52:11:52:17|Inout audio_r is unused
+@W: CL158 :"C:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":52:20:52:26|Inout audio_v is unused
+@N: CL159 :"C:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":69:2:69:7|Input sd_cdn is unused.
+@N: CL159 :"C:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":69:10:69:14|Input sd_wp is unused.
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: C:\lscc\ulx3s-passthru\proj\ulx3s-v2.0-12f\project\synwork\layer0.rt.csv
+

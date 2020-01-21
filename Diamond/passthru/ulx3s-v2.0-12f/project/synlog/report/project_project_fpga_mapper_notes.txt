@@ -1,0 +1,21 @@
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MO111 :"c:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":40:2:40:4|Tristate driver led_1 (in view: work.ulx3s_passthru_wifi(behavioral)) on net led[4] (in view: work.ulx3s_passthru_wifi(behavioral)) has its enable tied to GND.
+@N: MO111 :"c:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":40:2:40:4|Tristate driver led_2 (in view: work.ulx3s_passthru_wifi(behavioral)) on net led[3] (in view: work.ulx3s_passthru_wifi(behavioral)) has its enable tied to GND.
+@N: MO111 :"c:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":40:2:40:4|Tristate driver led_3 (in view: work.ulx3s_passthru_wifi(behavioral)) on net led[2] (in view: work.ulx3s_passthru_wifi(behavioral)) has its enable tied to GND.
+@N: MO111 :"c:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":40:2:40:4|Tristate driver led_4 (in view: work.ulx3s_passthru_wifi(behavioral)) on net led[1] (in view: work.ulx3s_passthru_wifi(behavioral)) has its enable tied to GND.
+@N: MO111 :"c:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":40:2:40:4|Tristate driver led_5 (in view: work.ulx3s_passthru_wifi(behavioral)) on net led[0] (in view: work.ulx3s_passthru_wifi(behavioral)) has its enable tied to GND.
+@N: MO111 :|Tristate driver sd_d_t[3] (in view: work.ulx3s_passthru_wifi(behavioral)) on net sd_d[3] (in view: work.ulx3s_passthru_wifi(behavioral)) has its enable tied to GND.
+@N: MO111 :|Tristate driver sd_d_t[2] (in view: work.ulx3s_passthru_wifi(behavioral)) on net sd_d[2] (in view: work.ulx3s_passthru_wifi(behavioral)) has its enable tied to GND.
+@N: MO111 :|Tristate driver sd_d_t[1] (in view: work.ulx3s_passthru_wifi(behavioral)) on net sd_d[1] (in view: work.ulx3s_passthru_wifi(behavioral)) has its enable tied to GND.
+@N: FX493 |Applying initial value "111111111111111111" on instance R_prog_release[17:0].
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+@N: MO111 :"c:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":40:2:40:4|Tristate driver led_obuft_0_.un1[0] (in view: work.ulx3s_passthru_wifi(behavioral)) on net led[0] (in view: work.ulx3s_passthru_wifi(behavioral)) has its enable tied to GND.
+@N: MO111 :"c:\lscc\ulx3s-passthru\rtl\ulx3s_v20_passthru_wifi.vhd":40:2:40:4|Tristate driver led_obuft_1_.un1[0] (in view: work.ulx3s_passthru_wifi(behavioral)) on net led[1] (in view: work.ulx3s_passthru_wifi(behavioral)) has its enable tied to GND.
+@N: FX1056 |Writing EDF file: C:\lscc\ulx3s-passthru\proj\ulx3s-v2.0-12f\project\project_project.edi
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
