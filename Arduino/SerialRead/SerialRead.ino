@@ -64,7 +64,8 @@ void loop(){
             client.print("Click <a href=\"/L\">here</a> to turn the LED on pin 5 off.<br>");
 
             client.print("<br><h1>");
-            client.print((char)Serial.read());
+            if (Serial.available())
+              client.print((char)Serial.read());
             client.print("</h1><br>");
 
             // The HTTP response ends with another blank line:
