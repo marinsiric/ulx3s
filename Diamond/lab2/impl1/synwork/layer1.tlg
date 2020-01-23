@@ -1,9 +1,0 @@
-@N: CD630 :"D:\Documents\github\ulx3s\Diamond\lab2\serial_tx.vhd":34:7:34:15|Synthesizing work.serial_tx.behavioral.
-Post processing for work.serial_tx.behavioral
-Running optimization stage 1 on serial_tx .......
-Running optimization stage 2 on serial_tx .......
-
-For a summary of runtime and memory usage per design unit, please see file:
-==========================================================
-@L: D:\Documents\github\ulx3s\Diamond\lab2\impl1\synwork\layer1.rt.csv
-

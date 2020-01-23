@@ -1,7 +1,0 @@
-#Start recording tcl command: 1/21/2020 03:57:53
-#Project Location: D:/Documents/github/ulx3s/Diamond/lab2; Project name: lab2
-prj_project new -name "lab2" -impl "impl1" -dev LFE5U-12F-6BG381C -synthesis "synplify" -lpf "D:/Documents/github/ulx3s/Diamond/lab2/ulx3s_v20.lpf"
-prj_src add "D:/Documents/github/ulx3s/Diamond/lab2/lab2.sch" "D:/Documents/github/ulx3s/Diamond/lab2/serial_tx.vhd"
-prj_project save
-prj_run Export -impl impl1
-#Stop recording: 1/21/2020 04:01:45
